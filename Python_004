@@ -1,0 +1,16 @@
+ n = int(input())
+    sum = 0
+    count = 0
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+    
+    for score in student_marks[query_name]:
+        count = count + 1
+        sum = sum + score
+    avg = sum/count 
+        
+    print("%.2f"%avg)    
